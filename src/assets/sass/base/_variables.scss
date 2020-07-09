@@ -1,0 +1,210 @@
+// Colors
+// -----------------------------------------------------------------------------
+
+$black: 						#000;
+$white: 						#FFF;
+// System Colors
+$black--5:						 rgba($black, 0.05) !default;
+$black--10:						 rgba($black, 0.1) !default;
+$black--15:						 rgba($black, 0.15) !default;
+$black--20:						 rgba($black, 0.2) !default;
+$black--30:						 rgba($black, 0.3) !default;
+$black--50:						 rgba($black, 0.5) !default;
+$white--5:						 rgba($white, 0.05) !default;
+
+$white--10:						 rgba($white, 0.1) !default;
+$white--15:						 rgba($white, 0.15) !default;
+$white--20:						 rgba($white, 0.2) !default;
+$white--30:						 rgba($white, 0.3) !default;
+$white--50:						 rgba($white, 0.5) !default;
+$white--60:						 rgba($white, 0.6) !default;
+
+// Base Colors
+$ebony:                   		#0F1422;
+$supernova: 					#F5C500;
+$spring-wood:					#F6F6EE;
+$oslo-gray:               		#8B8C90;
+$jelly-bean:					#2A9AA4;
+$mako:							#41444E;
+$alto:							#DCDCDC;
+
+// Theme Colors
+$color-alpha:               	$ebony;
+$color-beta:                	$supernova;
+$color-delta:					$spring-wood;
+$color-gamma:               	$oslo-gray;
+$color-etha:					$jelly-bean;
+
+// Colors Maps
+$theme-colors: (
+	alpha:							$color-alpha,
+	beta:							$color-beta,
+	delta:							$color-delta,
+	gamma:							$color-gamma,
+	etha:							$color-etha,
+	white:							$white
+);
+
+// Text Colors
+$color-text-base:				$black !default;
+
+$color-text-alpha:			    $color-alpha !default;
+$color-text-beta:				$color-beta !default;
+$color-text-gamma:				$color-gamma !default;
+
+
+// Background
+$color-background-default:		$white;
+
+$color-background-alpha:		$color-alpha;
+$color-background-beta:			$color-beta;
+$color-background-delta:		$color-delta;
+$color-background-gamma:		$color-gamma;
+
+// Lines
+$color-line:                  	$color-gamma;
+$color-line-light:				$mako;
+$color-line--faded:				$alto;
+
+// Social
+$color-facebook:				#386cd7;
+$color-twitter:					#0eb4ea;
+
+$social-colors: (
+	'facebook':					$color-facebook,
+	'twitter':					$color-twitter,
+);
+
+/*
+-----------------------------------------
+Typography
+-----------------------------------------
+*/
+
+// Font Family
+$font-family-primary:			     'opensans', sans-serif;
+$font-family-secondary:		      	 'montserrat', sans-serif;
+
+$font-family-text:				      $font-family-primary;
+$font-family-title:				      $font-family-secondary;
+
+
+
+// Font Weight
+$font-weight-light:				      300;
+$font-weight-regular:			      400;
+$font-weight-medium:			      500;
+$font-weight-semibold:		      	  600;
+$font-weight-bold:				      700;
+
+$font-weight: (
+	light: 						300,
+	regular: 					400,
+	medium: 					500,
+	semibold: 					600,
+	bold: 						700,
+);
+
+// Global
+$font-family-base:              $font-family-primary;
+$font-size-base:              	15px;
+$line-height-base:            	1.5;
+$font-weight-base:            	$font-weight-regular;
+
+// Html
+$html-font-size:				        10px;
+
+// Headings
+
+// Headings
+$h1-font-size: (
+	null: 						(60px, 65px),
+	lg:							(35px, 40px)
+);
+$h2-font-size: (
+	null: 						(35px, 38px),
+	lg: 						(30px, 35px),
+);
+$h3-font-size: (
+	null: 						(23px, 38px),
+);
+$h4-font-size: (
+	null: 						(14px, 14px),
+);
+$h5-font-size: (
+	null: 						16px,
+	lg: 						14px,
+);
+
+
+// Paragraphe
+$p-font-size: (
+	null: 						(15px, 22px), 
+);
+
+// Button
+$btn-font-size: (
+	null: 						(15px, 16px),
+);
+
+/*
+-----------------------------------------
+Breakpoints
+-----------------------------------------
+*/
+
+$breakpoints: (
+	xs: 						0,
+	sm: 						576px,
+	md: 						768px,
+	lg: 						992px,
+	xl: 						1200px
+);
+
+/*
+-----------------------------------------
+Main
+-----------------------------------------
+*/
+
+$main-spacing: 					100px;
+$main-spacing-lg: 				60px;
+
+
+/*
+-----------------------------------------
+Header
+-----------------------------------------
+*/
+
+$header-height:               180px;
+$header-height-scroll:        105px;
+$header-height-lg:			  80px;
+
+
+/*
+-----------------------------------------
+SideBar
+-----------------------------------------
+*/
+
+$sidebar-width:					100px;
+$sidebar-height-lg:				55px;
+
+/*
+-----------------------------------------
+Admin Toolbar
+-----------------------------------------
+*/
+
+$admin-toolbar-height: 			  38.8px;
+$admin-toolbar-open-height: 	  78.6px;
+
+/*
+-----------------------------------------
+News
+-----------------------------------------
+*/
+
+$news-slide-width:				430px;
+$news-slide-overflow:			300px;

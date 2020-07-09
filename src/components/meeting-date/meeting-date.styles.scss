@@ -1,0 +1,49 @@
+.react-datepicker {
+    font-size: 1.3rem !important;
+    border-radius: 0;
+    font-family: 'montserrat';
+    border: 1px solid #dbdbdb;
+    box-shadow: 0 4px 12px rgba(0,0,0,.15);
+
+    &-wrapper{
+        width: 100%;
+    }
+    input[type="text"]{
+        border: none;
+    }
+    &__triangle{
+        border-bottom-color: #fff !important;
+    }
+    &__current-month {
+        font-size: 1.2rem !important;
+        font-weight: 500;
+    }
+
+    &__header {
+        padding-top: 6px !important;
+        background-color: #fff;
+    }
+
+    &__navigation {
+        top: 13px !important;
+    }
+
+    &__day {
+        margin: 0.5rem !important;
+        padding: 0.5rem 0!important;
+        width: 2.5rem !important;
+        &--selected{
+            color: #4eb5e6;
+            background-color: #fff;
+
+            &:hover{
+                color: #fff !important;
+            }
+        }
+    }
+
+    &__day-name{
+        color: #ff9a19;
+        margin: 0.5rem !important;
+    }
+}

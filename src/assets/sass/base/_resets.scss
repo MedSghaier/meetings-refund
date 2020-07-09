@@ -1,0 +1,114 @@
+/*
+-----------------------------------------
+Global
+-----------------------------------------
+*/
+
+*{
+	outline: none !important;
+}
+
+html{
+	font-size: $html-font-size;
+}
+
+body{
+	font-family: $font-family-base;
+	font-size: rem($font-size-base);
+	line-height: $line-height-base;
+	font-weight: $font-weight-base;
+	color: $color-alpha;
+}
+
+/*
+-----------------------------------------
+Link
+-----------------------------------------
+*/
+
+a{
+	color: inherit;
+	text-decoration: none !important;
+	transition: all 0.2s ease-in-out;
+	@include hover-focus-active {
+		color: inherit;
+	}
+}
+
+/*
+-----------------------------------------
+Button
+-----------------------------------------
+*/
+
+button{
+	background-color: transparent;
+	cursor: pointer;
+	border: 0;
+}
+
+/*
+-----------------------------------------
+Text
+-----------------------------------------
+*/
+
+label{
+	font-weight: normal;
+	@include not-last-child(){
+		margin-bottom: rem(10px);
+	}
+}
+
+strong,
+b{
+	font-weight: $font-weight-bold;
+}
+
+/*
+-----------------------------------------
+Lists
+-----------------------------------------
+*/
+
+ol,
+ul,
+dl {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+/*
+-----------------------------------------
+Hr
+-----------------------------------------
+*/
+
+hr{
+	border-color: inherit;
+}
+
+
+/*
+-----------------------------------------
+iFrame
+-----------------------------------------
+*/
+iframe {
+	width: 100%;
+	border: 0;
+}
+
+/*
+-----------------------------------------
+Input
+-----------------------------------------
+*/
+input:-webkit-autofill,
+input:-webkit-autofill-selected,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+	background-color: inherit !important;
+}

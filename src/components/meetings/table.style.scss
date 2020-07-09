@@ -1,0 +1,21 @@
+.table{
+    width: 100%;
+}
+
+.table-wrapper{
+    padding: 0 30px;
+    position: relative;
+
+    .add-btn,
+    .remove-btn{
+        position: absolute;
+        right: 0;
+    }
+
+    .add-btn{
+        top: 0;
+    }
+    .remove-btn{
+        top: 25px;
+    }
+}

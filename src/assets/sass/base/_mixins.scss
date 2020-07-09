@@ -1,0 +1,165 @@
+/*
+-----------------------------------------
+Typography
+-----------------------------------------
+*/
+
+@mixin font-face($font-face__name, $font-face__file, $font-face__weight: normal, $font-face__style: normal) {
+    @font-face {
+        font-family: '#{$font-face__name}';
+        src: url('#{$font-path}/#{$font-face__name}/#{$font-face__file}.woff2') format('woff2'),
+             url('#{$font-path}/#{$font-face__name}/#{$font-face__file}.woff') format('woff');
+        font-weight: $font-face__weight;
+        font-style: $font-face__style;
+    }
+}
+
+/*
+-----------------------------------------
+Font Size
+-----------------------------------------
+*/
+
+@mixin font-size($fs-map) {
+	@each $fs-breakpoint, $fs-font-size in $fs-map {
+		@if $fs-breakpoint == null {
+			font-size: rem(nth($fs-font-size, 1));
+			@if length($fs-font-size) >= 2 {
+				line-height: rem(nth($fs-font-size, 2));
+			}
+		}
+		@else {
+			@include respond-below($fs-breakpoint){
+				font-size: rem(nth($fs-font-size, 1));
+				@if length($fs-font-size) >= 2 {
+					line-height: rem(nth($fs-font-size, 2));
+				}
+			}
+		}
+	}
+}
+
+/*
+-----------------------------------------
+Get Icon
+-----------------------------------------
+*/
+
+@mixin get-icon($ico-map) {
+	content: $ico-map;
+	font-family: $icomoon-font-family;
+	line-height: normal;
+}
+
+/*
+-----------------------------------------
+Focus
+-----------------------------------------
+*/
+
+@mixin focus(){
+	transition: all 0.2s ease-in-out;
+	&:focus 						{@content};
+}
+
+
+@mixin hover-focus-active {
+	&:hover,
+	&:focus,
+	&:active {
+	  @content;
+	}
+  }
+/*
+-----------------------------------------
+Child Selector
+-----------------------------------------
+*/
+
+@mixin not-first-child(){
+	&:not(:first-child) 			{@content};
+}
+
+@mixin not-last-child(){
+	&:not(:last-child) 				{@content};
+}
+
+/*
+-----------------------------------------
+Placeholder
+-----------------------------------------
+*/
+
+@mixin placeholder(){
+	&::-webkit-input-placeholder 	{@content};
+	&::-moz-placeholder 			{@content};
+	&:-ms-input-placeholder 		{@content};
+	&:-moz-placeholder 				{@content};
+}
+
+/*
+-----------------------------------------
+Link Hover
+-----------------------------------------
+*/
+
+@mixin link-hover($color-default, $color-hover) {
+	color: $color-default;
+    transition: all 0.2s ease-in-out;
+	@include hover-focus-active{
+		color: $color-hover;
+	}
+}
+
+/*
+-----------------------------------------
+Media Queries
+-----------------------------------------
+*/
+
+// Respond Above
+@mixin respond-above($breakpoint) {
+	@if map-has-key($breakpoints, $breakpoint) {
+		$breakpoint-value: map-get($breakpoints, $breakpoint);
+		@media (min-width: $breakpoint-value) {
+			@content;
+		}
+	}
+	@else {
+		@warn 'Invalid breakpoint: #{$breakpoint}.';
+	}
+}
+
+
+//  Respond Below
+@mixin respond-below($breakpoint) {
+	@if map-has-key($breakpoints, $breakpoint) {
+		$breakpoint-value: map-get($breakpoints, $breakpoint);
+		@media (max-width: ($breakpoint-value - 1)) {
+			@content;
+		}
+	}
+	@else {
+		@warn 'Invalid breakpoint: #{$breakpoint}.';
+	}
+}
+
+
+//  Respond Between
+@mixin respond-between($lower, $upper) {
+	@if map-has-key($breakpoints, $lower) and map-has-key($breakpoints, $upper) {
+		$lower-breakpoint: map-get($breakpoints, $lower);
+		$upper-breakpoint: map-get($breakpoints, $upper);
+		@media (min-width: $lower-breakpoint) and (max-width: ($upper-breakpoint - 1)) {
+			@content;
+		}
+	}
+	@else {
+		@if (map-has-key($breakpoints, $lower)==false) {
+			@warn 'Your lower breakpoint was invalid: #{$lower}.';
+		}
+		@if (map-has-key($breakpoints, $upper)==false) {
+			@warn 'Your upper breakpoint was invalid: #{$upper}.';
+		}
+	}
+}

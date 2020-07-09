@@ -1,0 +1,12 @@
+/*
+-----------------------------------------
+Convert px to rem
+-----------------------------------------
+*/
+
+@function rem($pixels) {
+	@if (not unitless($pixels)) {
+		$pixels: $pixels / ($pixels * 0 + 1);
+	}
+    @return #{$pixels/10}rem
+};

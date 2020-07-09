@@ -1,0 +1,144 @@
+/*
+-----------------------------------------
+Position
+-----------------------------------------
+*/
+
+.tl-absolute{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/*
+-----------------------------------------
+Spacing
+-----------------------------------------
+*/
+
+$space-amounts: (5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 70, 80, 90, 100);
+$space-sides: (top, bottom, left, right);
+$space-directions: (y, x);
+
+@each $space in $space-amounts {
+
+	// All Sides
+	.u-m-#{$space} {
+		margin: rem($space) !important;
+	}
+	.u-p-#{$space} {
+		padding: rem($space) !important;
+	}
+
+	// By Side
+	@each $side in $space-sides {
+		.u-m#{str-slice($side, 0, 1)}-#{$space} {
+			margin-#{$side}: rem($space) !important;
+		}
+		.u-p#{str-slice($side, 0, 1)}-#{$space} {
+			padding-#{$side}: rem($space) !important;
+		}
+	}
+
+	// By Direction
+	@each $direction in $space-directions {
+		@if $direction == y{
+			.u-m#{$direction}-#{$space} {
+				margin-top: rem($space) !important;
+				margin-bottom: rem($space) !important;
+			}
+			.u-p#{$direction}-#{$space} {
+				padding-top: rem($space) !important;
+				padding-bottom: rem($space) !important;
+			}
+		}@else{
+			.u-m#{$direction}-#{$space} {
+				margin-left: rem($space) !important;
+				margin-right: rem($space) !important;
+			}
+			.u-p#{$direction}-#{$space} {
+				padding-left: rem($space) !important;
+				padding-right: rem($space) !important;
+			}
+		}
+	}
+
+	// Horizontal Negative Margin
+	.u-nm-#{$space} {
+		margin-left: rem(-$space) !important;
+		margin-right: rem(-$space) !important;
+	}
+}
+
+/*
+-----------------------------------------
+Image
+-----------------------------------------
+*/
+
+.img-cover{
+	img{
+		object-fit: cover;
+		font-family: 'object-fit: cover;';
+		height: 100%;
+		width: 100%;
+	}
+
+}
+
+.img-cover-round{
+	position: relative;
+	padding-bottom: 100%;
+	border-radius: 100%;
+	overflow: hidden;
+	.img-cover{
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+}
+
+/*
+-----------------------------------------
+Colors
+-----------------------------------------
+*/
+
+// Text Colors
+@each $alias, $color in $theme-colors {
+	.text-color--#{$alias}{
+		color: $color !important;
+	}
+}
+
+// Social Colors
+
+// Text
+@each $alias, $color in $social-colors {
+	.text-color-#{$alias}{
+		color: $color !important;
+	}
+	
+}
+
+
+// Background Colors
+@each $alias, $color in $theme-colors {
+	.bg-color--#{$alias}{
+		background-color: $color !important;
+	}
+}
+
+
+/*
+-----------------------------------------
+Font Weight
+-----------------------------------------
+*/
+
+@each $alias, $weight in $font-weight {
+	.font-#{$alias}{
+		font-weight: $weight !important;
+	}
+}
+

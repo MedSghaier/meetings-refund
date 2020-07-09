@@ -1,0 +1,465 @@
+/*
+-----------------------------------------
+Primary Button
+-----------------------------------------
+*/
+.btn{
+    &--primary{
+        display: inline-block;
+        background-color:transparent;
+        padding: rem(10px) rem(15px);
+        border: rem(1px) solid $color-gamma;
+        border-radius: rem(40px);
+        transition: all 0.2s ease-in-out;
+
+        @include hover-focus-active{
+            background-color: $color-background-beta;
+            border-color: $color-beta;
+        }
+
+        &-dark{
+            text-transform: uppercase;
+            background-color: $color-background-alpha;
+            color: $white;
+            border:  rem(1px) solid transparent;
+            font-size: rem(10px);
+            line-height: rem(20px);
+            font-weight: 700;
+            padding: rem(10px) rem(30px);
+
+            @include hover-focus-active{
+                background-color: $white;
+                color: $color-text-alpha;
+                border: rem(1px) solid $white;
+            }
+        }
+
+        &-light{
+            border-color: $white;
+            @include hover-focus-active{
+                background-color: $white;
+                border-color: $white;
+                color: $color-alpha;
+            }
+        }
+    }
+}
+
+/*
+-----------------------------------------
+Secondary Button
+-----------------------------------------
+*/
+
+.btn{
+    &--secondary{
+        font-size: rem(13px);
+        display: flex;
+        align-items: center;
+        font-weight: 700;
+        text-transform: uppercase;
+        transition: all 0.2s ease-in-out;
+        i{
+            border: rem(1px) solid $color-etha;
+            font-weight: 500;
+            border-radius: 50%;
+            font-size: rem(24px);
+            margin-right: rem(10px);
+            padding: rem(7px);
+            transition: all 0.2s ease-in-out;
+
+            @include respond-below(xl){
+                margin-right: 0;
+            }
+        }
+
+        @include hover-focus-active(){
+            i{
+                background-color: $color-etha;
+                &:before{
+                    color: $white;
+                }
+            }
+        }
+
+        span:first-of-type{
+            @include respond-below(xl){
+                display: none;
+            }
+        }
+    }
+
+}
+
+/*
+-----------------------------------------
+Tertiary Button
+-----------------------------------------
+*/
+.btn{
+    &--tertiary{
+        display: inline-flex;
+        background-color:transparent;
+        padding: rem(14px) rem(30px);
+        border: rem(1px) solid $color-line--faded;
+        font-size: rem(10px);
+        font-weight: 700;
+        border-radius: rem(40px);
+        transition: all 0.2s ease-in-out;
+        align-items: center;
+        text-transform: uppercase;
+        color: $white;
+        white-space: nowrap;
+
+        i{
+            margin-right: rem(10px);
+            font-size: rem(14px);
+        }
+
+        @include hover-focus-active{
+            background-color: $color-background-beta;
+            color: $color-text-alpha;
+            border-color: $color-beta;
+        }
+
+        &-light{
+            color: $color-text-alpha;
+        }
+
+        &-beta{
+            background-color: $color-background-beta;
+            color: $white;
+            border: none;
+            @include hover-focus-active{
+                color: $white;
+            }
+        }
+
+        &-etha{
+            background-color: $color-alpha;
+            @include hover-focus-active{
+                background-color: $color-etha;
+                color: $white;
+                border-color: $color-etha;
+            }
+        }
+    }
+}
+
+/*
+-----------------------------------------
+Badge Button
+-----------------------------------------
+*/
+
+.btn{
+    &-badge{
+        display: inline-block;
+        width: rem(40px);
+        height: rem(40px);
+        line-height: rem(40px);
+        background-color: $color-background-beta;
+        border: rem(1px) solid $color-alpha;
+        border-radius: 50%;
+        color: $color-alpha;
+        text-align: center;
+        font-size: rem(16px);
+        transition: all 0.2s ease-in-out;
+
+        @include hover-focus-active{
+            background-color: $white;
+            border-color: $white;
+        }
+
+        &--primary{
+            border: none;
+            background-color: $white;
+            position: relative;
+            i{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+            }
+            &:hover{
+                background-color: $color-background-beta;
+            }
+            &:active,
+            &:focus{
+                background-color: $white;
+            }
+        }
+
+        &--beta{
+            color: $color-text-beta;
+            border-color: $color-beta;
+            background-color: transparent;
+            @include hover-focus-active{
+                color: $color-text-alpha;
+                background-color: $color-background-beta;
+            }
+        }
+
+        &--download{
+            background-color: $color-background-beta;
+            color: $color-text-alpha;
+            border: none;
+            position: relative;
+            i{
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                transition: all 0.2s ease-in-out;
+            }
+            &:hover{
+                background-color: $color-background-beta;
+                i {
+                    transform: translateX(-50%) translateY(-50%) translateY(#{rem(10px)});
+                }
+            }
+            &:active,
+            &:focus{
+                background-color: $color-background-alpha;
+                color: $white;
+                i {
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+
+        &--etha{
+            @extend .btn-badge--download ;
+            background-color: $color-etha;
+            color: $white;
+            @include hover-focus-active(){
+                background-color: $color-etha;
+                color:$white;
+            }
+
+            &-light{
+                background-color: $white;
+                color: $color-etha;
+                @include hover-focus-active(){
+                    background-color: $color-etha;
+                    color:$white;
+                }
+            }
+        }
+
+        &--light{
+            border: rem(1px) solid $color-gamma;
+            background-color: transparent;
+            @include hover-focus-active{
+                background-color: $color-background-beta;
+                border-color: transparent;
+            }
+        }
+
+        &--small{
+            width: rem(30px);
+            height: rem(30px);
+            line-height: rem(30px);
+            background-color: transparent;
+            border-color: $white;
+            color: $white;
+            font-size: rem(13px);
+
+            &-dark{
+                color: $color-text-alpha;
+                border-color: $color-alpha;
+            }
+            @include hover-focus-active{
+                background-color:  $color-background-beta;
+                color: $color-text-alpha;
+                border-color: $color-beta;
+            }
+
+            &-etha{
+                color: $color-gamma;
+                border-color: $color-gamma;
+                @include hover-focus-active{
+                    background-color:$color-etha;
+                    color: $white;
+                    border-color: $color-etha;
+                }
+            }
+
+        }
+
+        &.no-border{
+            border: none !important;
+        }
+    }
+}
+
+
+/*
+-----------------------------------------
+Arrow Button
+-----------------------------------------
+*/
+
+.btn{
+    &--arrow{
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        font-size: rem(14px);
+        line-height: rem(23px);
+        padding-left: rem(25px);
+        color: $color-text-gamma;
+        transition: all 0.2s ease-in-out;
+
+        &:before{
+            font-weight: 700;
+            // @include get-icon($ico-arrow-right);
+            position: absolute;
+            top: 50%;
+            color: $color-text-alpha;
+            left: 0;
+            transform: translateY(-50%);
+            transition: all 0.2s ease-in-out;
+            display: block;
+        }
+
+        &:hover{
+            color: $color-text-alpha;
+            text-decoration: underline !important;
+            
+            &:before{
+                color: $color-text-beta;
+                transform: translate(rem(4px),-50%);
+            }
+        }
+        &:active,
+        &:focus{
+            color: $color-text-beta;
+            font-weight: 700;
+            text-decoration: underline;
+            
+            &:before{
+                color: $color-text-beta;
+                transform: translate(rem(4px),-50%);
+            }
+        }
+
+        &-back{
+            color: $color-alpha;
+            &:before{
+                // @include get-icon($ico-arrow-left);
+            }
+
+            @include hover-focus-active(){
+                color: $color-text-alpha;
+                font-weight: 700;
+                text-decoration: none !important;
+
+                &:before{
+                    transform: translate(rem(-4px),-50%);
+                }
+            }
+        }
+        
+    }
+}
+
+/*
+-----------------------------------------
+Button Faded
+-----------------------------------------
+*/
+.btn{
+    &-faded{
+        display: inline-flex;
+        align-items: center;
+        color: $white--50;
+        span:first-of-type{
+            text-decoration: underline !important;
+            margin-right: rem(10px);
+        }
+        &:hover{
+            color: $white;
+        }
+        i:before{
+            font-size: rem(16px);
+        }
+    }
+}
+
+/*
+-----------------------------------------
+Scroll To Top Btn
+-----------------------------------------
+*/
+
+.btn{
+    &-scroll{
+        width: rem(45px);
+        height: rem(45px);
+        border-radius: 50%;
+        border: 1px solid $white;
+        color: $white;
+        position: relative;
+        @include respond-below(lg){
+            width: rem(30px);
+            height: rem(30px);
+        }
+        &:before{
+            // @include get-icon($ico-arrow-top);
+            position: absolute;
+            font-size: rem(40px);
+            top: 50%;
+            left: 50%;
+            display: block;
+            transform: translateX(-50%);
+            transition: all 0.2s ease-in-out;
+
+            @include respond-below(lg){
+                font-size: rem(20px);
+            }
+        }
+
+        @include hover-focus-active(){
+            color: $white;
+            &:before{
+                transform: translateX(-50%) translateY(rem(-10px));
+            }
+        }
+
+        span:first-of-type{
+            position: absolute;
+            font-size: rem(10px);
+            line-height: rem(16px);
+            text-transform: uppercase;
+            font-weight: 700;
+            left: 50%;
+            transform: translateX(-50%);
+            top: calc(100% + #{rem(30px)});
+
+            @include respond-below(lg){
+                display: none;
+            }
+        }
+    }
+}
+
+
+
+/*
+-----------------------------------------
+Newsletter Sub Button
+-----------------------------------------
+*/
+.btn-sub{
+    display: block;
+    background-color: $color-alpha;
+    color: $white;
+    padding: rem(20px) rem(50px);
+
+    @include hover-focus-active{
+        background-color:$color-beta;
+        color: $color-alpha;
+    }
+}
