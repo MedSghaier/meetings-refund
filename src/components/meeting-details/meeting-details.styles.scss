@@ -1,0 +1,11 @@
+.ReactCollapse--collapse {
+    transition: all 0.2s ease-in-out;
+    // background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+    // background: linear-gradient(to right, #16222a, #3a6073); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 15px;
+}
+  
+.ReactCollapse--content{
+    padding: 30px;
+}

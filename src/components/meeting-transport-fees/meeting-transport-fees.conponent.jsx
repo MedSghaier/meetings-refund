@@ -23,7 +23,7 @@ const MeetingTransportFees = ({ id, setMultipleData }) => {
                     onBlur={e => changeHandler(e)}
                     type="text"
                     name="type"
-                    placeholder="Type de frais"
+                    placeholder="Fees type"
                     className="form-control" />
             </div>
             <div className="col-lg-4">

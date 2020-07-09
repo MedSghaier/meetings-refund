@@ -1,4 +1,4 @@
-import React, { useState, Fragment } from 'react'
+import React, { useState } from 'react'
 import { connect } from 'react-redux';
 import DatePicker from "react-datepicker";
 
@@ -16,8 +16,8 @@ const MeetingDate = ({ id, setData }) => {
         setData({id, date: resultDate})
     }
     return (
-        <Fragment>
-            <h3 className="mb-2">Meeting date* :</h3>
+        <div className="box-element">
+            <h3 className="mb-4 line-dash line-dash--white text-white">Meeting date* :</h3>
             <DatePicker
                 selected={meetingDate}
                 dateFormat="dd/MM/yyyy"
@@ -25,7 +25,7 @@ const MeetingDate = ({ id, setData }) => {
                 required
                 onChange={date => { setMeetingDate(date); changeHandler(date) }}
                 className="form-control" />
-        </Fragment>
+        </div>
     )
 }
 

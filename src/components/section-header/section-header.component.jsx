@@ -18,15 +18,15 @@ const SectionHeader = ({ addNewMeeting }) => {
                 <input
                     type="text"
                     name="meeting"
-                    className="form-control"
-                    placeholder="Nom de la réunion"
+                    className="form-control form-control--dark"
+                    placeholder="New meeting name"
                     value={title}
                     onChange={(e) => setTitle(e.target.value)} />
             </div>
             <div className="col-lg-2">
                 <Button className="btn--tertiary btn--tertiary-etha" onClick={addHandler}>
                     <i className="ico-plus"></i>
-                    <span>Ajouter une réunion</span>
+                    <span>Add a new meeting</span>
                 </Button>
             </div>
         </div>

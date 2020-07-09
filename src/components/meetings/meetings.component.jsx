@@ -9,19 +9,21 @@ import Button from '../button/button.component';
 const Meetings = ({ meetings, selectedMeetings, deleteMeetings }) => {
 
     return (
-        <div className="container">
-            <div className="row mb-5">
-                <div className="col-6"><h1 className="line-dash">Meetings</h1></div>
+        <div className="u-py-50">
+            <div className="container">
+                <div className="row mb-5">
+                    <div className="col-6"><h1 className="line-dash">Meetings</h1></div>
+                </div>
+                <SectionHeader />
+                {
+                    meetings.map(meeting =>  <MeetingDetails meeting={meeting} key={meeting.id}/>)
+                }
+                <Button 
+                    onClick={deleteMeetings}
+                    className="btn--tertiary btn--tertiary-beta mt-5">
+                        Delete Meetings { `(${selectedMeetings.length})` }
+                </Button>
             </div>
-            <SectionHeader />
-            {
-                meetings.map(meeting => <MeetingDetails meeting={meeting} key={meeting.id}/>)
-            }
-            <Button 
-                onClick={deleteMeetings}
-                className="btn--tertiary btn--tertiary-beta mt-5">
-                    Delete Meetings { `(${selectedMeetings.length})` }
-            </Button>
         </div>
     )
 }

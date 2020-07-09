@@ -11,8 +11,8 @@ const MeetingType = ({ id, setData }) => {
     }
 
     return (
-        <React.Fragment>
-            <h3 className="mb-2 mt-5">Type de Réunion* : </h3>
+        <div className="box-element">
+            <h3 className="mb-4 line-dash line-dash--white text-white">Type de Réunion* : </h3>
             <input
                 type="text"
                 required
@@ -20,7 +20,7 @@ const MeetingType = ({ id, setData }) => {
                 placeholder="Meeting Type"
                 onBlur={({ target: { value } }) => changeHandler(value)}
             />
-        </React.Fragment>
+        </div>
     )
 }
 

@@ -23,6 +23,30 @@
 }
 
 
+
+
+/*
+-----------------------------------------
+Dash
+-----------------------------------------
+*/
+
+//Dash
+.dash{
+    position: relative;
+    padding-bottom: rem(10px);
+
+    &:before{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: rem(25px);
+        border-bottom: rem(7px) solid $color-beta;
+    }
+}
+
+
 // Dash Color
 @each $alias, $color in $theme-colors {
 	.line-dash--#{$alias}{

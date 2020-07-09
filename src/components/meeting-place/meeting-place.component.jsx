@@ -10,8 +10,8 @@ const MeetingPlace = ({ id, setData }) => {
         }
     }
     return (
-        <React.Fragment>
-            <h3 className="mb-2">Lieu</h3>
+        <div className="box-element">
+            <h3 className="mb-4 line-dash line-dash--white text-white">Lieu</h3>
             <input
                 type="text"
                 name="field[0].content[subfield].value"
@@ -19,7 +19,7 @@ const MeetingPlace = ({ id, setData }) => {
                 placeholder="Meeting Location"
                 onBlur={({ target: { value } }) => changeHandler(value)}
             />
-        </React.Fragment>
+        </div >
     )
 }
 
