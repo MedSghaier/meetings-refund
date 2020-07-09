@@ -16,7 +16,7 @@ const MeetingPlace = ({ id, setData }) => {
                 type="text"
                 name="field[0].content[subfield].value"
                 className="form-control"
-                placeholder="Lieu de réunion"
+                placeholder="Meeting Location"
                 onBlur={({ target: { value } }) => changeHandler(value)}
             />
         </React.Fragment>

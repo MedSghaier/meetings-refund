@@ -11,7 +11,7 @@ const Meetings = ({ meetings, selectedMeetings, deleteMeetings }) => {
     return (
         <div className="container">
             <div className="row mb-5">
-                <div className="col-6"><h1 className="line-dash">Reunions</h1></div>
+                <div className="col-6"><h1 className="line-dash">Meetings</h1></div>
             </div>
             <SectionHeader />
             {
@@ -19,9 +19,9 @@ const Meetings = ({ meetings, selectedMeetings, deleteMeetings }) => {
             }
             <Button 
                 onClick={deleteMeetings}
-                className="btn--tertiary btn--tertiary-beta">
-                    Supprimer Reunions { `(${selectedMeetings.length})` } 
-                </Button>
+                className="btn--tertiary btn--tertiary-beta mt-5">
+                    Delete Meetings { `(${selectedMeetings.length})` }
+            </Button>
         </div>
     )
 }

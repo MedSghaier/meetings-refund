@@ -31,7 +31,7 @@ const MeetingTransportFees = ({ id, setMultipleData }) => {
                     onBlur={e => changeHandler(e)}
                     type="number"
                     name="amount"
-                    placeholder="Montant"
+                    placeholder="Amount"
                     className="form-control" />
             </div>
             <div className="col-lg-4">
@@ -40,7 +40,7 @@ const MeetingTransportFees = ({ id, setMultipleData }) => {
                     type="file"
                     name="bill"
                     className="form-control"
-                    placeholder="Justificatif" />
+                    placeholder="Proof" />
             </div>
         </div>
     )

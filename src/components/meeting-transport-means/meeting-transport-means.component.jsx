@@ -17,7 +17,7 @@ const MeetingTransportMeans = ({ id, setMultipleData }) => {
                 <input
                     onBlur={e => changeHandler(e)}
                     type="text"
-                    placeholder="Moyen de transport"
+                    placeholder="Transportation Means"
                     name="mean"
                     className="form-control" />
             </div>
@@ -25,7 +25,7 @@ const MeetingTransportMeans = ({ id, setMultipleData }) => {
                 <input
                     onBlur={e => changeHandler(e)}
                     type="number"
-                    placeholder="Nombre de kilomètre"
+                    placeholder="Number of KM"
                     name="distance"
                     className="form-control" />
             </div>

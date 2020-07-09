@@ -1,69 +1,3 @@
-/*
------------------------------------------
-Line
------------------------------------------
-*/
-
-.line{
-    position: relative;
-    padding-bottom: rem(5px);
-    &:before{
-        content:'';
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        border-bottom: rem(1px) solid $color-line--faded;
-    }
-
-    &--lg{
-        @include respond-below(lg){
-            &:before{
-                content: none;
-            }
-        }
-    }
-
-    &--10{
-        padding-bottom: rem(10px);
-    }
-}
-
-/*
------------------------------------------
-Dash
------------------------------------------
-*/
-
-//Dash
-.dash{
-    position: relative;
-    padding-bottom: rem(10px);
-
-    &:before{
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: rem(25px);
-        border-bottom: rem(7px) solid $color-beta;
-    }
-
-    &--line-lg{
-        &:after{
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            border-bottom: rem(1px) solid $color-line--faded;
-
-            @include respond-below(lg){
-                content: '';
-            }
-        }
-    }
-}
-
 // Line Dash
 .line-dash{
     position: relative;
@@ -86,12 +20,6 @@ Dash
         width: 100%;
         border-bottom: rem(1px) solid $color-line--faded;
     }
-
-    &--noline{
-        &:after{
-            content: none;
-        }
-    }
 }
 
 
@@ -107,59 +35,5 @@ Dash
 		&:before{
 			border-color: $color !important;
 		}
-    }
-}
-
-/*
------------------------------------------
-Header Title Dash
------------------------------------------
-*/
-.h-dash{
-    position: relative;
-    &:before{
-        content: '';
-        position: absolute;
-        width: rem(50px);
-        height: rem(10px);
-        background-color: $white;
-        top: 50%;
-        transform: translateY(-50%);
-        right: rem(-80px);
-
-        @include respond-below(lg){
-            content : none;
-        }
-    }
-}
-
-
-/*
------------------------------------------
-Leaf Line
------------------------------------------
-*/
-
-.leaf-line{
-    display: block;
-    position: relative;
-    margin-left: rem(30px);
-    padding: rem(10px) 0;
-    &:after{
-        content: '';
-        position: absolute;
-        top: 50%;
-        left: 0;
-        transform: translateY(-50%);
-        border-bottom: rem(1px) solid $color-line--faded;
-        width: 100%;
-    }
-    &:before{
-        // @include get-icon($ico-leaf);
-        color: $color-beta;
-        position: absolute;
-        top: 50%;
-        left: rem(-30px);
-        transform: translateY(-50%);
     }
 }

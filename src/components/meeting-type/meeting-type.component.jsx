@@ -17,7 +17,7 @@ const MeetingType = ({ id, setData }) => {
                 type="text"
                 required
                 className="form-control"
-                placeholder="Type de réunion"
+                placeholder="Meeting Type"
                 onBlur={({ target: { value } }) => changeHandler(value)}
             />
         </React.Fragment>

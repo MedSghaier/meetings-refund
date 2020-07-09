@@ -23,7 +23,7 @@ const MeetingAcommFees = ({ id, setMultipleData }) => {
                 <input
                     onBlur={e => changeHandler(e)}
                     type="text"
-                    placeholder="Type de séjour"
+                    placeholder="Accomodation type"
                     name="type"
                     className="form-control" />
             </div>
@@ -31,7 +31,7 @@ const MeetingAcommFees = ({ id, setMultipleData }) => {
                 <input
                     onBlur={e => changeHandler(e)}
                     type="number"
-                    placeholder="Montant"
+                    placeholder="Amount"
                     className="form-control"
                     name="amount" />
             </div>
@@ -41,7 +41,7 @@ const MeetingAcommFees = ({ id, setMultipleData }) => {
                     type="file"
                     className="form-control"
                     name="bill"
-                    placeholder="Justificatif" />
+                    placeholder="Proof" />
             </div>
         </div>
     )

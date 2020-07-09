@@ -58,7 +58,7 @@ const meetingsReducer = (state = INTIAL_STATE, action) => {
         case MeetingActionTypes.REMOVE_MEETING_FROM_SELECTED:
             return {
                 ...state,
-                selectedMeetings: state.selectedMeetings.filter(item => item === action.payload)
+                selectedMeetings: state.selectedMeetings.filter(item => item !== action.payload)
             }
         case MeetingActionTypes.DELETE_MEETINGS:
             return {

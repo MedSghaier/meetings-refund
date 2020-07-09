@@ -66,14 +66,6 @@ $color-line:                  	$color-gamma;
 $color-line-light:				$mako;
 $color-line--faded:				$alto;
 
-// Social
-$color-facebook:				#386cd7;
-$color-twitter:					#0eb4ea;
-
-$social-colors: (
-	'facebook':					$color-facebook,
-	'twitter':					$color-twitter,
-);
 
 /*
 -----------------------------------------
@@ -114,39 +106,31 @@ $font-weight-base:            	$font-weight-regular;
 // Html
 $html-font-size:				        10px;
 
-// Headings
+
+// Row
+$row-spacing: (
+	null: 						25px,
+	md: 						25px,
+);
 
 // Headings
 $h1-font-size: (
-	null: 						(60px, 65px),
-	lg:							(35px, 40px)
+	null: 						(36px, 36px),
+	lg: 						(28px, 36px),
 );
 $h2-font-size: (
-	null: 						(35px, 38px),
-	lg: 						(30px, 35px),
+	null: 						(25px, 30px),
+	lg: 						(25px, 30px),
 );
 $h3-font-size: (
-	null: 						(23px, 38px),
+	null: 						(18px, 18px),
 );
 $h4-font-size: (
-	null: 						(14px, 14px),
+	null: 						(16px, 16px),
 );
 $h5-font-size: (
-	null: 						16px,
-	lg: 						14px,
+	null: 						(14px, 14px),
 );
-
-
-// Paragraphe
-$p-font-size: (
-	null: 						(15px, 22px), 
-);
-
-// Button
-$btn-font-size: (
-	null: 						(15px, 16px),
-);
-
 /*
 -----------------------------------------
 Breakpoints
@@ -160,51 +144,3 @@ $breakpoints: (
 	lg: 						992px,
 	xl: 						1200px
 );
-
-/*
------------------------------------------
-Main
------------------------------------------
-*/
-
-$main-spacing: 					100px;
-$main-spacing-lg: 				60px;
-
-
-/*
------------------------------------------
-Header
------------------------------------------
-*/
-
-$header-height:               180px;
-$header-height-scroll:        105px;
-$header-height-lg:			  80px;
-
-
-/*
------------------------------------------
-SideBar
------------------------------------------
-*/
-
-$sidebar-width:					100px;
-$sidebar-height-lg:				55px;
-
-/*
------------------------------------------
-Admin Toolbar
------------------------------------------
-*/
-
-$admin-toolbar-height: 			  38.8px;
-$admin-toolbar-open-height: 	  78.6px;
-
-/*
------------------------------------------
-News
------------------------------------------
-*/
-
-$news-slide-width:				430px;
-$news-slide-overflow:			300px;

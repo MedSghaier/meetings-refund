@@ -70,6 +70,27 @@ $space-directions: (y, x);
 	}
 }
 
+
+/*
+-----------------------------------------
+Row Spacing
+-----------------------------------------
+*/
+
+.row-spacing{
+	margin-bottom: rem(- map-get($row-spacing, null));
+	@include respond-below(md){
+		margin-bottom: rem(- map-get($row-spacing, md));
+	}
+    [class^="col-"],
+    [class*=" col-"] {
+		margin-bottom: rem(map-get($row-spacing, null));
+		@include respond-below(md){
+			margin-bottom: rem(map-get($row-spacing, md));
+		}
+	}
+}
+
 /*
 -----------------------------------------
 Image
@@ -108,24 +129,6 @@ Colors
 @each $alias, $color in $theme-colors {
 	.text-color--#{$alias}{
 		color: $color !important;
-	}
-}
-
-// Social Colors
-
-// Text
-@each $alias, $color in $social-colors {
-	.text-color-#{$alias}{
-		color: $color !important;
-	}
-	
-}
-
-
-// Background Colors
-@each $alias, $color in $theme-colors {
-	.bg-color--#{$alias}{
-		background-color: $color !important;
 	}
 }
 

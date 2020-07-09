@@ -29,7 +29,7 @@ const MeetingDetails = (
             <div className="row row-spacing">
                 <div className="col-6">
                     <h2 className="line-dash line-dash--etha">{title}</h2>
-                    <input type="checkbox" name="delete" style={checkboxStyle} onChange={onCheckChangeHandler} />
+                        <input type="checkbox" name="delete" onChange={onCheckChangeHandler} style={checkboxStyle}/>
                 </div>
             </div>
             {/* END MEETING TITLE */}
@@ -48,7 +48,7 @@ const MeetingDetails = (
             {/* END SIGNLE ENTRY DATA */}
 
             {/* MULTY ENTRY DATA -- Accomodation + Transport + Distance */}
-            <h3 className="mt-4 mb-2">Moyen de transport</h3>
+            <h3 className="mt-4 mb-2">Transportation means</h3>
             <div className="row">
                 <div className="col-auto">
                     <Button className="btn-badge btn-badge--beta" onClick={() => addTransMeansCount(id)}>+</Button>
@@ -60,7 +60,7 @@ const MeetingDetails = (
                 </div>
             </div>
 
-            <h3 className="mt-4 mb-2">Frais de déplacements</h3>
+            <h3 className="mt-4 mb-2">Transportation fees</h3>
             <div className="row">
                 <div className="col-auto">
                     <Button className="btn-badge btn-badge--beta" onClick={() => addTransFeesCount(id)}>+</Button>
@@ -73,7 +73,7 @@ const MeetingDetails = (
             </div>
 
 
-            <h3 className="mt-4 mb-2">Frais de séjour </h3>
+            <h3 className="mt-4 mb-2">Accomodation fees</h3>
             <div className="row">
                 <div className="col-auto">
                     <Button className="btn-badge btn-badge--beta" onClick={() => addAccomFeesCount(id)}>+</Button>

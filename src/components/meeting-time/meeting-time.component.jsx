@@ -15,7 +15,7 @@ const MeetingTime = ({ id, setData }) => {
             <input
                 type="text"
                 className="form-control"
-                placeholder="Horaires de réunion"
+                placeholder="Meeting Hours"
                 onBlur={({ target: { value } }) => changeHandler(value)}
             />
         </React.Fragment>

@@ -17,7 +17,7 @@ const MeetingDate = ({ id, setData }) => {
     }
     return (
         <Fragment>
-            <h3 className="mb-2">Date de réunion* :</h3>
+            <h3 className="mb-2">Meeting date* :</h3>
             <DatePicker
                 selected={meetingDate}
                 dateFormat="dd/MM/yyyy"
