@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/meetings-refund/static/css/main.d27c4fd8.css",
+    "main.js": "/meetings-refund/static/js/main.js",
+    "index.html": "/meetings-refund/index.html",
+    "precache-manifest.5fa4cca1db434e438f0699a62111cdcb.js": "/meetings-refund/precache-manifest.5fa4cca1db434e438f0699a62111cdcb.js",
+    "service-worker.js": "/meetings-refund/service-worker.js",
+    "static/css/main.d27c4fd8.css.map": "/meetings-refund/static/css/main.d27c4fd8.css.map"
+  },
+  "entrypoints": [
+    "static/css/main.d27c4fd8.css",
+    "static/js/main.js"
+  ]
+}
