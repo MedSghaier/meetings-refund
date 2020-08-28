@@ -11,7 +11,7 @@ const MeetingPlace = ({ id, setData }) => {
     }
     return (
         <div className="box-element">
-            <h3 className="mb-4 line-dash line-dash--white text-white">Lieu</h3>
+            <h3 className="mb-4 line-dash line-dash--white text-white">Place</h3>
             <input
                 type="text"
                 name="field[0].content[subfield].value"

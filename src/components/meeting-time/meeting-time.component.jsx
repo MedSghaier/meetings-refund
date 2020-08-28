@@ -11,7 +11,7 @@ const MeetingTime = ({ id, setData }) => {
     }
     return (
         <div className="box-element">
-            <h3 className="mb-4 line-dash line-dash--white text-white">Horaires: </h3>
+            <h3 className="mb-4 line-dash line-dash--white text-white">Time: </h3>
             <input
                 type="text"
                 className="form-control"

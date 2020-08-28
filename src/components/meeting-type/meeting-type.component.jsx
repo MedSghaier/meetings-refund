@@ -12,7 +12,7 @@ const MeetingType = ({ id, setData }) => {
 
     return (
         <div className="box-element">
-            <h3 className="mb-4 line-dash line-dash--white text-white">Type de Réunion* : </h3>
+            <h3 className="mb-4 line-dash line-dash--white text-white">Meeting Type* : </h3>
             <input
                 type="text"
                 required
